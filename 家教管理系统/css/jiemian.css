@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#header{
+    height:25px;
+    background-color: gray;
+}
+
+.header-login{
+    height: 20px;
+    font-size: 16px;
+    background-color: gray;
+    float: left;
+}
+.header-list a{
+    text-decoration: none;
+    padding: 0 10px 0 20px;
+    font-size: 16px;
+    
+}
+.header-list{
+    float: right;
+}
+.header-list li{
+    float: left;
+    list-style: none;
+}
+#middle{
+    height: 650px;
+    background-color: gray;
+    background-image: url(../12345.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 180px;
+ 
+}       
