@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/myself.css">
+</head>
+<body>
+    <div class="one">
+        <img class="shezhi" src="images/shezhi.png" alt="">
+        <img class="message" src="images/xiaoxi.png" alt="">
+    </div>
+    <div class="two">
+        <div class="user_img"></div>
+        <div class="user_name">AlexanderNie</div>
+        <div class="user_uid">UID: 481960</div>
+        <div class="user_r"><img src="images/erweima.png" alt=""></div>
+    </div>
+    <div class="three">
+        <div class="three_1">
+            <div class="three_up">26</div>
+            <div class="three_down">动态</div>
+        </div>
+        <div class="three_1">
+            <div class="three_up">0</div>
+            <div class="three_down">关注</div>
+        </div>
+        <div class="three_1">
+            <div class="three_up">1</div>
+            <div class="three_down">粉丝</div>
+        </div>
+        <div class="three_1">
+            <div class="three_up">0</div>
+            <div class="three_down">收藏</div>
+        </div>
+    </div>
+    <div class="four"><img src="images/wer.jpg" alt=""></div>
+    <div class="five">
+        <div class="five_1">
+            <div class="five_img"><img src="images/qianbao.png" alt=""></div>
+            <div class="five_name">我的钱包</div>
+            <div class="five_r"><img src="images/left1.png" alt=""></div>
+        </div>
+        <div class="five_1">
+            <div class="five_img"><img src="images/quanzi.png" alt=""></div>
+            <div class="five_name">我的圈子</div>
+            <div class="five_r"><img src="images/left1.png" alt=""></div>
+        </div>
+        <div class="five_1">
+            <div class="five_img"><img src="images/yaoqinghaoyou.png" alt=""></div>
+            <div class="five_name">邀请好友</div>
+            <div class="five_r"><img src="images/left1.png" alt=""></div>
+        </div>
+        <div class="five_1">
+            <div class="five_img"><img src="images/bangzhu.png" alt=""></div>
+            <div class="five_name">相关帮助</div>
+            <div class="five_r"><img src="images/left1.png" alt=""></div>
+        </div>
+        <div class="five_1">
+            <div class="five_img"><img src="images/dianpu_1.png" alt=""></div>
+            <div class="five_name">创作中心</div>
+            <div class="five_r"><img src="images/left1.png" alt=""></div>
+        </div>
+    </div>
+    <div id="fabu_s">
+        <div id="fabu_0">
+            <div class="fabu_1"><img src="images/tupian.png" alt=""></div>
+            <div class="fabu_1 fabu_4"><img src="images/yinyue3.png" alt=""></div>
+            <div class="fabu_1 fabu_4"><img src="images/bi.png" alt=""></div>
+            <div class="fabu_1 fabu_4"><img src="images/wenjian.png" alt=""></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_0"><a href="index.html"><img src="images/zhuye7.png" alt=""></a></div>
+        <div class="footer_0"><a href="music.html"><img src="images/yinyue.png" alt=""></a></div>
+        <div class="footer_0" id="fabu"><img src="images/fabu_1.png" alt=""></div>
+        <div class="footer_0"><a href="care.html"><img src="images/wenjian.png" alt=""></a></div>
+        <div class="footer_0"><img src="images/zhanghu3.png" alt=""></div>
+    </div>
+    <script src="js/zepto.js"></script>
+    <script src="js/touch.js"></script>
+    <script>
+        var nows = 0;
+        $('#fabu').on('click',function(){
+            if(nows==0){
+                $('#fabu_s').show();
+                document.getElementById("fabu_s").className = 'fabu_2';
+                nows = 1;
+            }
+            else if(nows==1){
+                $('#fabu_s').hide();
+                document.getElementById("fabu_s").className = 'fabu_3';
+                nows = 0;
+            }
+        })
+    </script>
+</body>
+</html>

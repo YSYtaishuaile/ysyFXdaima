@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="one">
+        <input class="search" type="text" placeholder=" 搜索用户、标签、圈子...">
+        <img class="message" src="images/xiaoxi.png" alt="">
+    </div>
+    <div class="one_add">
+        <ul class="one_1">
+            <li class="one_1_1"><a href="care.html"><span>关注</span></a></li>
+            <li class="one_1_1"><span id="one_hot_1">热门</span></li>
+            <li class="one_1_2"><img class ="one_hot_2" src="images/remen.png" alt=""><span>Vlog</span></li>
+            <li class="one_1_1"><span>专栏</span></li>
+            <li class="one_1_1"><span><img class ="one_xiala" src="images/xiala.png" alt=""></span></li>
+        </ul>
+    </div>
+    <div class="two">
+        <div id="lun_1" style="display:block;"><img class="two_img" src="images/body.jpg" alt=""></div>
+        <div id="lun_2" style="display:block;"><img class="two_img" src="images/body1.jpg" alt=""></div>
+        <div id="lun_3" style="display:block;"><img class="two_img" src="images/body2.jpg" alt=""></div>
+    </div>
+    <script type="text/javascript">
+        var NowImg=1;
+        var MaxImg=3;
+        setInterval(function(){
+            for(var i=1;i<=MaxImg;i++){
+                if(NowImg==i)
+                    document.getElementById("lun_"+NowImg).style.display='block';
+                else
+                    document.getElementById("lun_"+i).style.display='none';
+            }
+            if(NowImg==MaxImg)
+                NowImg=1;
+            else
+                NowImg++;
+            },2000)
+    </script>
+    <div class="three">
+        <div class="three_1"><img src="images/paixingbang.png" alt=""><span>排行榜</span></div>
+        <div class="three_2"><img src="images/jingpina.png" alt=""><span>编辑精选</span></div>
+        <div class="three_3"><img src="images/shuben.png" alt=""><span>学习推荐</span></div>
+    </div>
+    <div class="four">
+        <div id="four_0"></div>
+        <div id="four_1">
+            <div id="four_1_1">
+                <div class="user_img"></div>
+                <div class="user_name">ysy</div>
+                <div class="user_r"><img src="images/gengduo.png" alt=""></div>
+            </div>
+            <div id="four_1_2">
+                <div class="four_left"><img src="images/guanzhu1.png" alt=""></div>
+                <div class="four_left"><img src="images/liaotian.png" alt=""></div>
+                <div class="four_left"><img id="img_s1" src="images/zhifeiji_1.png" alt=""></div>
+                <div class="four_right"><img src="images/shoucang.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div id="fabu_s">
+        <div id="fabu_0">
+            <div class="fabu_1"><img src="images/tupian.png" alt=""></div>
+            <div class="fabu_1 fabu_4"><img src="images/yinyue3.png" alt=""></div>
+            <div class="fabu_1 fabu_4"><img src="images/bi.png" alt=""></div>
+            <div class="fabu_1 fabu_4"><img src="images/wenjian.png" alt=""></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_0"><img src="images/zhuye6.png" alt=""></div>
+        <div class="footer_0"><a href="music.html"><img src="images/yinyue.png" alt=""></a></div>
+        <div class="footer_0" id="fabu"><img src="images/fabu_1.png" alt=""></div>
+        <div class="footer_0"><a href="care.html"><img src="images/wenjian.png" alt=""></a></div>
+        <div class="footer_0"><a href="myself.html"><img src="images/personal.png" alt=""></a></div>
+    </div>
+    <script src="js/zepto.js"></script>
+    <script src="js/touch.js"></script>
+    <script>
+        var nows = 0;
+        $('#fabu').on('click',function(){
+            if(nows==0){
+                $('#fabu_s').show();
+                document.getElementById("fabu_s").className = 'fabu_2';
+                nows = 1;
+            }
+            else if(nows==1){
+                $('#fabu_s').hide();
+                document.getElementById("fabu_s").className = 'fabu_3';
+                nows = 0;
+            }
+        })
+    </script>
+    <script>
+        for(var i=0;i<24;i++){
+            $('<img src="images4/'+(i+1)+'.jpg"/>').appendTo('#four_0');
+        }
+        var nowIndex = 0;
+        $('#four_0 img').on('click',function(){
+            $('#four_1').show();
+            $('#four_1').css("background-image","url(images4/"+ ($(this).index()+1) +".jpg)")
+            nowIndex = $(this).index();
+        })
+        $('#four_1').on('click',function(){
+            $(this).hide();
+        }).on('swipeLeft',function(){
+            nowIndex++;
+            if(nowIndex == $('#four_0 img').size()){
+                nowIndex = 0;
+            }
+            $('#four_1').css("background-image","url(images4/"+ (nowIndex+1) +".jpg)")
+        }).on('swipeRight',function(){
+            nowIndex--;
+            if(nowIndex == -1){
+                nowIndex = $('#four_0 img').length-1;
+            }
+            $('#four_1').css("background-image","url(images4/"+ (nowIndex+1) +".jpg)")
+        })
+    </script>
+</body>
+</html>
