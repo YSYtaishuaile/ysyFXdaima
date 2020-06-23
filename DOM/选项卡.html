@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #div1 {
+            margin: 100px;
+
+        }
+        #btns {
+            overflow: hidden;
+        }
+        #div1 li {
+            float: left;
+            margin-left: 10px;
+            border: 1px solid gray;
+            background-color: greenyellow;
+            font-size: 14px;
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        #btns li.active{
+            background: #6D84B4;
+            color: white;
+        }
+
+        #div2 {
+            
+            width: 300px;
+            height: 120px;
+            border: 1px solid gray;
+        }
+        #div2 div{
+            display: none;
+        }
+        #div2.selected{
+            display: block;
+        }
+    </style>
+    <div id="div1">
+        <ul id="btns">
+            <li class="active">嘉瑞</li>
+            <li>五老</li>
+            <li>sb钰哥</li>
+        </ul>
+        <div id="div2">
+            <div class="selected">嘉瑞</div>
+            <div>五老</div>
+            <div>sb钰哥</div>
+        </div>
+    </div>
+
+    <script>
+        var oUl = document.getElementById('btns');
+        var aLi = oUl.getElementsByTagName('li');
+        var oDiv2 = document.getElementById('div2');
+        var aDiv = oDiv2.getElementsByTagName('div')
+
+
+        for(var i=0 ; i<aLi.length; i++){
+            aLi[i].index = i;
+            aLi[i].onclick = function(){
+                for(var j=0; j<aLi.length ; j++){
+                    aLi[j].className = "";
+                    aDiv[j].className = "";
+                }
+                this.className = "active";
+                aDiv[this.index].className = "selected";
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

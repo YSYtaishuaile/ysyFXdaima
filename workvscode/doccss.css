@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    background:rgb(73, 146, 230);
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    color: black;
+}
+
+.container {
+    width: 600px;
+    height: 300px;
+    padding: 15px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.dashboard {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 2px dashed black;
+    border-radius: 5px;
+}
+
+.dashboard #intro, #uploading, #notSupport {
+    color:black;
+    display: block;
+    text-align: center;
+    line-height: 240px;
+    font-size: 47px;
+}
+
+#notSupport, #uploading,#uploaded{
+    display: none;
+}
+
+.dashboard .info {
+    float: right;
+    padding: 30px;
+    font-size: 14px;
+    color: #757575;
+}
+
+#fileInfo {
+    display: none;
+}
+
+
+.dashboard .info .btn {
+    background: #ffbc31;
+    color: #FFF;
+    text-align: center;
+    padding: 6px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: default;
+}
+.icon-btns {
+    padding: 50px 0 60px 0;
+  }
+  
+ .icon-btns ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+.icon-btns ul li{
+    display: inline-block;
+    border: 1px solid #000;
+    margin-right: 10px;
+    padding: 26px;
+    border-radius: 35px;
+    border-color: rgb(79, 92, 99);
+    line-height: 50px;
+  }
+  
+.icon-btns ul li:hover {
+    border-color: rgb(179, 192, 199);
+  }
+  
+.icon-btns ul li:hover i {
+    color: rgb(179, 192, 199);
+  }
+  
+.icon-btns ul li i {
+    font-size: 25px;
+    color: rgb(79, 92, 99);
+  }

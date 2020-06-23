@@ -1,0 +1,28 @@
+* {
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box; 
+}
+html{ 
+    width: 100%; height: 100%; 
+}
+body{ 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    font-family: "microsoft yahei",Verdana, Arial, 微软雅黑; 
+}
+
+a:active{ 
+    color: #BABABA; 
+    background-color: #808080; 
+    border-radius: 30px; 
+}
+.l{ 
+    float: left; 
+}
+.r{ 
+    float: right; 
+}
+
+

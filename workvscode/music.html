@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的音乐播放器</title>
+		<link rel="stylesheet" type="text/css" href="./css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+    	<script type="text/javascript" src="./js/selector.js"></script>
+		<script type="text/javascript" src="./js/script.js"></script>
+	</head>
+
+	<body oncontextmenu="return false;" onselectstart="return false">
+		
+		<textarea name="" id="txt0" cols="30" rows="10" style="display: none;">
+			[ti:Gold Steps ]
+			[ar:Neck Deep  ]
+			[al:]
+			
+			[00:20.28]I've been stuck in the middle pages
+			[00:29.93]Hung up on a cross that I created
+			[00:38.68]Built out of the bones that I've been breaking
+			[00:38.98]The sign you said you needed
+			[00:48.54]Is there but you can't see it
+			[00:57.50]You might be down and out but you're still breathing
+			[01:02.25]If you write the story
+			[01:04.77]Then you'll find out we're all stuck on the same page
+			[01:07.16]Sometimes things will bend you
+			[01:11.86]But trust me you'll be fine
+			[01:14.38]'ve been moving mountains that I once had to climb
+			[01:28.14]And life's not out to get you
+			[01:37.96]Despite the things you've been through
+			[01:46.96]Because what you give is what you get
+			[01:56.42]And it doesn't make sense to make do
+			[02:05.34]The walls are caving in again
+			[02:10.02]Happens every now and then
+			[02:12.62]Always got me feeling like I'm fucked
+			[02:15.21]Falling in and out of bed
+			[02:19.89]Sleep so I feel like I'm dead
+			[02:22.31]Trying to get a grip is kinda rough
+			[02:43.79]You say life has lost it's meaning
+			[02:48.50]And that's true if you believe it
+			[02:53.45]But someday you will stand above your demons
+			[02:58.21]You're not beneath this
+			[03:04.46]If you write the story
+			[03:14.05]Then you'll find out we're all stuck on the same page
+			[03:22.83]Sometimes things will bend you
+			[03:27.72]But trust me you'll be fine
+			[03:30.13]I've been moving mountains that I once had to climb
+			[03:32.63]And life's not out to get you
+			[03:37.29]Despite the things you've been through
+			[03:39.71]Because what you give is what you get
+			[03:43.36]And it doesn't make sense to make do
+			[03:45.71]So pick yourself up
+			[03:48.15]You can't change what's been
+			[03:50.55]You must go on and learn while you live
+			[03:52.87]Yeah, life's not out to get you
+		</textarea>
+		
+		
+		<div class="page Opage" >
+			<div class="main">
+				
+				<div class="Lbox l">
+					<img src="neckdeep.jpg" ><br>
+				</div>
+				
+				<div class="Rbox r">
+					<h2 class="songName"></h2>
+					<span class="singer"></span>
+					<div class="Lyric"></div>
+				</div>
+			
+			</div>
+			<div class="footer">
+				<div class="main">
+					
+					<div class="l left">
+						<span class="last iconfont icon-kuaitui" title="上一首"></span>&nbsp;&nbsp;
+						<span class="play iconfont Iconfont icon-zanting" title="播放"></span>&nbsp;&nbsp;
+						<span class="next iconfont icon-kuaijin" title="下一首"></span>
+					</div>
+					
+					<div class="content clearfix">
+						<a class="l" ><img src="neckdeep.jpg"></a>&nbsp;
+						<div class="Box">
+							<span class="songName l"></span><span class="l">&nbsp;-&nbsp;</span><span class="singer l"></span>
+							<span class="r">
+								<span class="realTime">00:00</span>&nbsp;/&nbsp;<span class="totalTime">04:04</span>
+							</span><br>
+							<div class="strip">
+								<div class="progress"></div>
+								<span class="spot"></span>
+							</div>
+						</div>
+						<div class="volumeBox" style="display: none;">
+							<div class="groove">
+								<span class="volumeSpot"></span>
+							</div>
+						</div>&nbsp;
+						<span class="iconfont icon-shengyin"></span>
+					</div>
+					
+					<div class="r right">
+						<div class="list" style="display: none;">
+							<div class="Song"></div>
+						</div>
+						<div class="listTriangle" style="display: none;"></div>
+						<div class="gengduoBox" style="display: none;">
+							<span class="project iconfont icon-fenxiang" title="分享"></span>
+						</div>
+						<span class="iconfont loop icon-liebiaoxunhuan" title="循环方式"></span>&nbsp;&nbsp;&nbsp;
+						<span class="iconfont love icon-xihuan1" title="喜欢"></span>&nbsp;&nbsp;&nbsp;
+						<span class="iconfont icon-liebiao liebiao" title="播放列表" style="font-size: 26px;"></span>&nbsp;&nbsp;&nbsp;
+						<span class="iconfont icon-shezhi gengduo" title="更多" style="font-size: 26px;"></span>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<audio id="myMusic" src="Neck Deep - Gold Steps.mp3">
+			您的浏览器不支持音频播放！！！！
+		</audio>
+	</body>
+</html>
