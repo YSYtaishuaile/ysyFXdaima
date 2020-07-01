@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.shuo = function(){
+            console.log('我是'+this.name+'今年'+this.age);
+        }
+        var p1 = new Person('zs',20);
+        p1.shuo();
+        
+        function Book(name,color){
+            this.name = name ;
+            this.color =color;
+        }
+        Book.prototype.look = function(){
+            console.log('这本书叫'+this.name);
+            console.log('它的颜色是'+this.color);
+        }
+       
+        var book1 = new Book('斗破苍穹','白色');
+        var book2 = new Book('斗罗大陆','蓝色');
+        book1.look();
+        book2.look();
+    </script>
+</body>
+</html>
